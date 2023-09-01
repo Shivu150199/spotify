@@ -301,9 +301,9 @@ flex-direction:column;
   gap: 1rem;
   overflow: scroll;
 }
-.card-container::-webkit-scrollbar {
+/* .card-container::-webkit-scrollbar {
   display: none;
-}
+} */
 ::-webkit-scrollbar {
   display: none;
 }
@@ -318,7 +318,9 @@ flex-direction:column;
   padding: 1rem;
   /* transition:var(--transition); */
   box-shadow: var(--shadow-sm);
+    box-shadow:10px 15px 20px rgba(0 ,0 ,0, .5);
   position: relative;
+  margin-bottom:1rem;
 }
 .card:hover {
   background: #242424;
@@ -332,6 +334,7 @@ flex-direction:column;
 .card-title {
   color: white;
   font-size: 1rem;
+  font-weight:bold;
   margin-bottom: 1rem;
   cursor: pointer;
 }
@@ -413,6 +416,7 @@ hr {
 .player {
   height: 10vh;
   width: 100%;
+  min-width:47rem;
   position: fixed;
   bottom: 0;
   /* border:1px solid white; */
@@ -422,6 +426,7 @@ hr {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   color: white;
+  
 }
 .album-btn {
   display: none;
@@ -573,13 +578,23 @@ margin-bottom:1rem;
   align-items:center;
   justify-content:space-between;
   gap:1rem;
+  
 }
 @media screen and (max-width:900px) {
   .first-card-container{
      grid-template-columns:1fr 1fr;
   }
 
-  
+.card-container{
+  grid-template-columns:repeat(3, 1fr);
+}
+  .card{
+    width:9.5rem;
+  }
+.first-card h3{
+  font-size:1rem;
+}
+
 }
 
 
@@ -589,6 +604,7 @@ grid-template-columns:1fr 3fr 1fr;
 border-radius:var(--borderRadius);
 background:var(--card-background);
 align-items:center;
+  box-shadow:10px 15px 20px rgba(0 ,0 ,0, .5);
 /* justify-content:space-between; */
 }
 .first-card h3{
@@ -596,10 +612,15 @@ align-items:center;
   /* margin-left:-30px; */
 
 }
+.first-card:hover{
+background:var(--container-background);
+}
 .first-card-img{
   width:4rem;
   height:4rem;
   border-radius:var(--borderRadius);
+  box-shadow:10px 15px 20px rgba(0 ,0 ,0, .2);
+  margin-right:15px;
 }
 
 .first-card-btn{
@@ -611,13 +632,32 @@ align-items:center;
   display:flex;
   justify-content:center;
   align-items:center;
+   box-shadow:2px 15px 40px 1px black;
   
   /* opacity:0; */
    transition: transform .7s ease;
-   box-shadow:var(--shadow-lg);
+   /* box-shadow:var(--shadow-lg); */
    margin-right:1rem;
 }
 
 .first-card-btn svg{
   fill:black;
+}
+
+@media screen and (max-width:1000px) {
+  .about-container{
+    grid-template-columns:1fr;
+    justify-content:center;align-items:center;
+    gap:1rem;
+  }
+  #footer{
+    grid-template-columns:1fr;
+    align-items:center;
+    justify-content:center;
+  }
+  .link-container{
+    margin-top:1rem;
+    width:90%;
+    justify-self:end;
+  }
 }
