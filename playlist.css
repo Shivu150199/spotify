@@ -61,40 +61,43 @@ img {
 .icon {
   width: 1rem;
 }
-body {
+body,html {
   background: var(--body-backgroundColor);
   font-family: var(--bodyFont);
+  height:100%;
+  display:flex;
+  flex-direction:column;
+  overflow:hidden;
+
 }
-#playlist{
-    display:grid;
-    grid-template-columns:1fr auto;
-  
-    justify-content:space-between;
+.playlist{
+   flex:1;
+   display:flex;
+   overflow:hidden;
 }
 
 
 
 .sidebar {
-  max-width: 22%;
-  min-width: 13rem;
+ flex:.25;
+  min-width: 15rem;
 
   height: 90vh;
-  position: fixed;
-  left: 0;
+
   display: flex;
   flex-direction: column;
   align-items: center;
   /* display: inline-block; */
-  overflow: scroll;
+  overflow-y: scroll;
 }
 
 
 .hero {
-  
-   
+  overflow-y: scroll;
+  min-width:30rem;
+   flex:.75;
 display:flex;
 flex-direction:column;
-  margin-left: 22%;
 
   height: 90vh;
 

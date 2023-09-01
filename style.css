@@ -61,21 +61,29 @@ img {
 .icon {
   width: 1rem;
 }
-body {
-  background: var(--body-backgroundColor);
+body,html {
+   background: var(--body-backgroundColor);
   font-family: var(--bodyFont);
+  height:100%;
+  display:flex;
+  flex-direction:column;
+  overflow:hidden;
 }
 
-#spotify {
-  display:grid;
-  grid-template-columns:1fr auto;
-  justify-content:space-between;
+.spotify {
+    flex:1;
+   display:flex;
+   overflow:hidden;
 }
 .hero {
   
+flex:.75;
+display:flex;
+flex-direction:column;
 
-  margin-left: 22%;
-
+  height: 90vh;
+  overflow-y:scroll;
+ min-width:30rem;
   height: 90vh;
 
   border-radius: var(--borderRadius);
@@ -95,18 +103,17 @@ body {
 }
 
 .sidebar {
-  max-width: 22%;
+  flex:.25;
   min-width: 13rem;
-  /* min-width:14em; */
+  
 
   height: 90vh;
-  position: fixed;
-  left: 0;
+
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* display: inline-block; */
-  overflow: scroll;
+ 
+  overflow-y: scroll;
 }
 
 .logo-header {
