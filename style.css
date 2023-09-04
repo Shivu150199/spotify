@@ -187,6 +187,9 @@ flex-direction:column;
   /* letter-spacing:var(--letterSpacing);  */
   cursor: pointer;
 }
+.content-btn:hover{
+  padding:0.3rem 0.80rem;
+}
 
 .heading-btn {
   display: flex;
@@ -208,12 +211,25 @@ flex-direction:column;
 .plus-btn {
   background: transparent;
   border: transparent;
-  font-size: 1.5rem;
+  font-size: 1rem;
   font-weight: 200;
   color: var(--text-subdued);
   text-transform: capitalize;
   letter-spacing: var(--letterSpacing);
   cursor: pointer;
+    padding:. 5rem;
+    width:30px;
+    height:30px;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    transition:var(--transition);
+}
+.plus-btn:hover{
+  background:lightgrey;
+  padding:.3rem;
+color:black;
 }
 
 
@@ -660,4 +676,36 @@ background:var(--container-background);
     width:90%;
     justify-self:end;
   }
+}
+
+
+
+
+.playlist-link{
+  background:var(--card-background);
+  display:inline-block;
+  margin:.5rem 0 0rem .6rem;
+  /* margin-left:1rem; */
+  border-radius:15px;
+  display:inline-flex;
+align-items:center;
+justify-content:center;
+  padding:.4rem .5rem;
+
+}
+.playlist-link>a{
+  color:var(--text-base);
+font-size:.8rem;
+font-weight:600;
+}
+
+.playlist-link>a:hover{
+  color:var(--text-subdued);
+}
+.search-link>a{
+  color:#595959;
+  transition:var(--transition);
+}
+.search-link>a:hover{
+  color:var(--text-base);
 }

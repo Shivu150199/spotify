@@ -190,6 +190,16 @@ flex-direction:column;
   cursor: pointer;
   /* letter-spacing:var(--letterSpacing); */
 }
+.heading-btn:hover{
+  color:var(--text-base);
+}
+.search-link>a{
+  color:#595959;
+  transition:var(--transition);
+}
+.search-link>a:hover{
+  color:var(--text-base);
+}
 .heading-btn img {
   width: 1rem;
   margin-right: 1rem;
@@ -198,12 +208,25 @@ flex-direction:column;
 .plus-btn {
   background: transparent;
   border: transparent;
-  font-size: 1.5rem;
+  font-size: 1rem;
   font-weight: 200;
   color: var(--text-subdued);
   text-transform: capitalize;
   letter-spacing: var(--letterSpacing);
   cursor: pointer;
+    padding:. 5rem;
+    width:30px;
+    height:30px;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    transition:var(--transition);
+}
+.plus-btn:hover{
+  background:lightgrey;
+  padding:.3rem;
+color:black;
 }
 
 
@@ -862,5 +885,108 @@ margin-top:.5rem;
   border-radius:var(--borderRadius);
   /* color:black; */
 
+
+}
+
+
+
+.playlist-link{
+  background:var(--card-background);
+  display:inline-block;
+  margin:.5rem 0 1rem .6rem;
+  /* margin-left:1rem; */
+  border-radius:15px;
+  display:inline-flex;
+align-items:center;
+justify-content:center;
+  padding:.4rem .5rem;
+
+}
+.playlist-link>a{
+  color:var(--text-base);
+font-size:.8rem;
+font-weight:600;
+}
+
+.playlist-link>a:hover{
+  color:var(--text-subdued);
+}
+
+
+.playlist-search{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  margin:0rem 0 1rem 0;
+  padding:0 1rem;
+}
+
+
+.playlist-search>i{
+  color:white;
+  font-size:1rem;
+}
+
+.playlist-search select{
+  background:transparent;
+  border:transparent;
+  font-size:1rem;
+  margin:0;
+  color:white;
+  width:5rem;
+  /* font:inherit; */
+  text-transform:capitalize;
+  
+}
+
+option{
+  background:var(--card-background);
+  font-size:1rem;
+  border:transparent;
+}
+
+.playlist-card-container{
+  display:flex;
+  /* align-items:center; */
+  flex-direction:column;
+  padding:.5rem;
+row-gap:.3rem;
+overflow:scroll;
+  
+}
+.playlist-card{
+  display:flex;
+align-items:center;
+padding:.5rem;
+border-radius:var(--borderRadius);
+
+}
+.playlist-card:hover{
+  background:var(--card-background);
+}
+
+.playlist-card img{
+  width:2.5rem;
+  height:2.5rem;
+  margin-right:.5rem;
+  border-radius:var(--borderRadius);
+  
+
+
+}
+
+.playlist-card-detail{
+  color:white;
+}
+
+.playlist-card-detail h3{
+  margin-bottom:2px;
+  letter-spacing:1px;
+  font-size:.9rem;
+}
+.playlist-card-detail p{
+color:var(--text-subdued);
+font-size:.8rem;
+letter-spacing:1px;
 
 }
