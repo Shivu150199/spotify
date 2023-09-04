@@ -82,10 +82,10 @@ display:flex;
 flex-direction:column;
 
   height: 90vh;
-  overflow-y:scroll;
- min-width:30rem;
+  overflow-y:auto;
+ /* min-width:30rem; */
   height: 90vh;
-
+margin-right:.4rem;
   border-radius: var(--borderRadius);
   background: linear-gradient(
     180deg,
@@ -100,6 +100,8 @@ flex-direction:column;
     #121212 85.45%,
     rgba(18, 18, 18, 0) 100%
   );
+
+  margin-top:0.5rem;
 }
 
 .sidebar {
@@ -113,7 +115,7 @@ flex-direction:column;
   flex-direction: column;
   align-items: center;
  
-  overflow-y: scroll;
+  overflow-y: auto;
 }
 
 .logo-header {
@@ -155,6 +157,54 @@ flex-direction:column;
 .link a i {
   margin: auto 1rem;
 }
+
+.links-box-2{
+  display:flex;
+  flex-direction:column;
+  
+}
+.link-box-2{
+  display:flex;
+  align-items:center;
+  gap:1rem;
+  margin-bottom:.8rem;
+  margin-left:.9rem;
+}
+.link-box-2>a,.fav-content>a{
+color:white;
+text-transform:capitalize;
+font-weight:400;
+letter-spacing:1px;
+}
+.icon-container{
+  width:1.5rem;
+  padding:5px;
+  border-radius: 0.3125rem;
+}
+.white{
+background:white;
+}
+.voilet{
+background:linear-gradient(135deg, #4000F4 0%, #603AED 22.48%, #7C6EE6 46.93%, #979FE1 65.71%, #A2B3DE 77.68%, #ADC8DC 88.93%, #C0ECD7 100%);
+}
+.green{
+
+background: #004638;
+}
+
+.fav-container{
+ 
+  flex:1;
+  overflow-y:auto;
+
+
+}
+.fav-content{
+  margin-bottom:1rem;
+  margin-left:1rem;
+}
+
+
 
 .box-header {
   display: flex;
@@ -235,13 +285,16 @@ color:black;
 
 .navbar {
   display: flex;
-  /* background:var(--container-background); */
+  background:var(--container-background);
   border-radius: var(--borderRadius);
   width: 100%;
   align-items: center;
   justify-content: space-between;
   padding: 1rem;
-  margin-top: 0.5rem;
+  /* margin-top: 0.5rem; */
+  position:sticky;
+  top:0;
+  z-index: 10;
 }
 .angle-icon {
   display: flex;
@@ -265,12 +318,20 @@ color:black;
   cursor: pointer;
   box-shadow: var(--shadow-md);
 }
+.cycle-btn-black{
+  background:var(--body-backgroundColor);
+  
+}
 
+.cycle-btn-black:hover{
+  color:white;
+}
 .user-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 0.8rem;
+  
 }
 
 .explore {
@@ -312,10 +373,12 @@ color:black;
 }
 
 .card-container {
-  display: grid;
-  grid-template-columns:repeat(6 ,1fr);
+  display:flex;
+flex-wrap:wrap;
+justify-content:flex-start;
+
   gap: 1rem;
-  overflow: scroll;
+  /* overflow: scroll; */
 }
 /* .card-container::-webkit-scrollbar {
   display: none;
@@ -395,12 +458,44 @@ color:black;
   width: 2rem;
   height: 2rem;
   font-size: 1rem;
+  background:#292929;
+  color:white;
 }
 .link-btn:hover {
-  background: var(--container-background);
+  background: ;
   transition: var(--transition);
+  background:#707070;
 }
 
+.install-box{
+    display: flex;
+   
+
+    justify-content: flex-start;
+    width: 100%;
+    padding: 1rem;
+    
+
+}
+
+.menu{
+
+  display:flex;
+  align-items:center;
+  gap:.8rem;
+  background:inherit;
+  border:transparent;
+  color:white;
+font-size:1.2rem;
+letter-spacing:1px;
+  justify-content:start;
+  margin-left:1rem;
+}
+
+.menu img{
+  width:1.8rem;
+
+}
 hr {
   margin: 2rem 1rem;
   color: var(--text-subdued);
@@ -589,10 +684,10 @@ margin-bottom:1rem;
 }
 
 .first-card-container{
-  display:grid;
-  grid-template-columns:1fr 1fr 1fr;
-  align-items:center;
-  justify-content:space-between;
+  display:flex;
+  flex-wrap:wrap;
+  
+  justify-content:flex-start;
   gap:1rem;
   
 }
@@ -615,16 +710,19 @@ margin-bottom:1rem;
 
 
 .first-card{
-display:grid;
-grid-template-columns:1fr 3fr 1fr;
+display:flex;
+justify-content:space-between;
 border-radius:var(--borderRadius);
 background:var(--card-background);
 align-items:center;
+gap:.5rem;
+width:18rem;
   box-shadow:10px 15px 20px rgba(0 ,0 ,0, .5);
 /* justify-content:space-between; */
 }
 .first-card h3{
   color:var(--text-base);
+  flex:1;
   /* margin-left:-30px; */
 
 }
@@ -709,3 +807,20 @@ font-weight:600;
 .search-link>a:hover{
   color:var(--text-base);
 }
+
+
+/* media query */
+ @media screen and (max-width:930px) {
+  
+ }
+ @media screen and (max-width:710px) {
+  .sidebar{
+  
+  display:none;
+  
+  }
+
+  .responsive{
+    display:none;
+  }
+ }

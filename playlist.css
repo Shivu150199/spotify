@@ -88,7 +88,7 @@ body,html {
   flex-direction: column;
   align-items: center;
   /* display: inline-block; */
-  overflow-y: scroll;
+  overflow-y: auto;
 }
 
 
@@ -100,7 +100,7 @@ display:flex;
 flex-direction:column;
 
   height: 90vh;
-
+margin-top: 0.5rem;
   border-radius: var(--borderRadius);
   background: linear-gradient(180deg, #90AEA7 0%, #000 89.7%);
 
@@ -120,13 +120,7 @@ flex-direction:column;
   margin-left: 1rem;
 }
 
-.box {
-  width: 95%;
-  background: var(--container-background);
-  margin-top: 0.5rem;
-  border-radius: var(--borderRadius);
-  padding: 1rem 0.5rem;
-}
+
 
 .links {
   display: flex;
@@ -145,7 +139,15 @@ flex-direction:column;
 .link a i {
   margin: auto 1rem;
 }
+.box {
+  width: 95%;
+  background: var(--container-background);
+  margin-top: 0.5rem;
+  border-radius: var(--borderRadius);
+  padding: 1rem 0.5rem;
 
+
+}
 .box-header {
   display: flex;
   align-items: center;
@@ -478,15 +480,27 @@ justify-content:space-between;
 
 
 .navbar {
+
   display: flex;
-  /* background:var(--container-background); */
+  background: #90AEA7;
   border-radius: var(--borderRadius);
   width: 100%;
   align-items: center;
   justify-content: space-between;
   padding: 1rem;
-  margin-top: 0.5rem;
+  /* margin-top: 0.5rem;
+   */
+    position:sticky;
+  top:0;
+  z-index: 10;
   
+}
+.library-box{
+  /* flex:1; */
+  display:flex;
+  flex-direction:column;
+  
+  overflow-y:auto;
 }
 .angle-icon {
   display: flex;
@@ -899,6 +913,7 @@ margin-top:.5rem;
   display:inline-flex;
 align-items:center;
 justify-content:center;
+align-self:flex-start;
   padding:.4rem .5rem;
 
 }
@@ -947,11 +962,12 @@ option{
 
 .playlist-card-container{
   display:flex;
+  flex:1;
   /* align-items:center; */
   flex-direction:column;
   padding:.5rem;
 row-gap:.3rem;
-overflow:scroll;
+overflow:auto;
   
 }
 .playlist-card{
@@ -988,5 +1004,45 @@ border-radius:var(--borderRadius);
 color:var(--text-subdued);
 font-size:.8rem;
 letter-spacing:1px;
+
+}
+
+.cycle-btn-black{
+  background:var(--body-backgroundColor);
+  
+}
+
+.cycle-btn-black:hover{
+  color:white;
+}
+
+
+.install-box{
+    display: flex;
+   
+
+    justify-content: flex-start;
+    width: 100%;
+    padding: 1rem;
+    
+
+}
+
+.menu{
+
+  display:flex;
+  align-items:center;
+  gap:.8rem;
+  background:inherit;
+  border:transparent;
+  color:white;
+font-size:1.2rem;
+letter-spacing:1px;
+  justify-content:start;
+  margin-left:1rem;
+}
+
+.menu img{
+  width:1.8rem;
 
 }
