@@ -93,17 +93,22 @@ body,html {
 
 
 .hero {
-  overflow-y: scroll;
-  min-width:30rem;
-   flex:.75;
+ 
+background: linear-gradient(180deg, #90AEA7 0%, #000 89.7%); 
+/* ///////////////// */
+flex:.75;
 display:flex;
 flex-direction:column;
 
   height: 90vh;
-margin-top: 0.5rem;
+  overflow-y:auto;
+ /* min-width:30rem; */
+  height: 90vh;
+margin-right:.4rem;
   border-radius: var(--borderRadius);
-  background: linear-gradient(180deg, #90AEA7 0%, #000 89.7%);
 
+
+  margin-top:0.5rem;
 }
 
 .logo-header {
@@ -486,6 +491,8 @@ justify-content:space-between;
   border-radius: var(--borderRadius);
   width: 100%;
   align-items: center;
+  border-bottom-left-radius:0;
+  border-bottom-right-radius:0;
   justify-content: space-between;
   padding: 1rem;
   /* margin-top: 0.5rem;
@@ -562,23 +569,7 @@ justify-content:space-between;
 
   color: white;
 }
-@media screen and (max-width:1000px) {
-  .about-container{
-    grid-template-columns:1fr;
-    justify-content:center;align-items:center;
-    gap:1rem;
-  }
-  #footer{
-    grid-template-columns:1fr;
-    align-items:center;
-    justify-content:center;
-  }
-  .link-container{
-    margin-top:1rem;
-    width:90%;
-    justify-self:end;
-  }
-}
+
 
 .foot-container {
   display: flex;
@@ -1014,6 +1005,7 @@ letter-spacing:1px;
 
 .cycle-btn-black:hover{
   color:white;
+  cursor:not-allowed;
 }
 
 
@@ -1046,3 +1038,56 @@ letter-spacing:1px;
   width:1.8rem;
 
 }
+
+
+@media screen and (max-width:1010px) {
+  .footer-link{
+  flex-direction:column;
+}
+.about-container{
+  grid-template-columns:1fr;
+  gap:2rem;
+}
+}
+
+
+ @media screen and (max-width:710px) {
+  .sidebar{
+  
+  display:none;
+  
+  }
+  .player{
+    display:none;
+  }
+  .hero{
+    /* justify-content:center; */
+    margin:0 auto;
+    flex:1;
+  }
+
+ .responsive-player{
+color:white;
+display:flex;
+align-items:center;
+justify-content:space-around;
+height:10vh;
+
+ }
+.responsice-icon>i:hover{
+ color:var(--text-subdued);
+cursor:pointer;
+}
+  
+ }
+
+
+ @media (min-width:710px) and (max-width:894px) {
+  
+ .detail-container h1{
+    font-size:2.5rem;
+    /* letter-spacing:-8px; */
+    line-height:3rem;
+  }
+
+ }

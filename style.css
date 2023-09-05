@@ -238,7 +238,7 @@ background: #004638;
   cursor: pointer;
 }
 .content-btn:hover{
-  padding:0.3rem 0.80rem;
+  transform:scale(1.1);
 }
 
 .heading-btn {
@@ -291,6 +291,8 @@ color:black;
   align-items: center;
   justify-content: space-between;
   padding: 1rem;
+    border-bottom-left-radius:0;
+  border-bottom-right-radius:0;
   /* margin-top: 0.5rem; */
   position:sticky;
   top:0;
@@ -299,6 +301,7 @@ color:black;
 .angle-icon {
   display: flex;
   gap: 1rem;
+  /* cursor:not-allowed; */
 }
 .circle-btn {
   width: 1.5rem;
@@ -325,6 +328,7 @@ color:black;
 
 .cycle-btn-black:hover{
   color:white;
+  cursor:not-allowed;
 }
 .user-container {
   display: flex;
@@ -512,6 +516,7 @@ hr {
 }
 .footer-link {
   display: flex;
+  /* flex-direction:column; */
   gap: 1.5rem;
 }
 .footer-link a {
@@ -527,7 +532,7 @@ hr {
 .player {
   height: 10vh;
   width: 100%;
-  min-width:47rem;
+  /* min-width:47rem; */
   position: fixed;
   bottom: 0;
   /* border:1px solid white; */
@@ -758,23 +763,7 @@ background:var(--container-background);
   fill:black;
 }
 
-@media screen and (max-width:1000px) {
-  .about-container{
-    grid-template-columns:1fr;
-    justify-content:center;align-items:center;
-    gap:1rem;
-  }
-  #footer{
-    grid-template-columns:1fr;
-    align-items:center;
-    justify-content:center;
-  }
-  .link-container{
-    margin-top:1rem;
-    width:90%;
-    justify-self:end;
-  }
-}
+
 
 
 
@@ -810,8 +799,27 @@ font-weight:600;
 
 
 /* media query */
- @media screen and (max-width:930px) {
-  
+ @media screen and (max-width:1030px) {
+    .first-card{
+    margin:0 auto;
+    width:90%;
+  }
+   .card-container{
+    margin:0 auto;
+    /* justify-content:center; */
+    align-items:center;
+    
+    flex-wrap: nowrap;
+    overflow:scroll;
+  }
+.footer-link{
+  flex-direction:column;
+}
+.about-container{
+  grid-template-columns:1fr;
+  gap:2rem;
+}
+
  }
  @media screen and (max-width:710px) {
   .sidebar{
@@ -819,8 +827,30 @@ font-weight:600;
   display:none;
   
   }
-
-  .responsive{
+  .player{
     display:none;
   }
+  .hero{
+    /* justify-content:center; */
+    margin:0 auto;
+    flex:1;
+  }
+
+ .responsive-player{
+color:white;
+display:flex;
+align-items:center;
+justify-content:space-around;
+height:10vh;
+
  }
+.responsice-icon>i:hover{
+ color:var(--text-subdued);
+cursor:pointer;
+}
+  
+ }
+
+
+
+
